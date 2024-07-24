@@ -97,8 +97,8 @@ class _GroceryListState extends State<GroceryList> {
       "shoppinglist-89cbb-default-rtdb.firebaseio.com",
       "shopping-list/${updatedItem.id}.json",
     );
-
-    final response = await http.put(
+    
+    await http.put(
       url,
       headers: {
         "Content-Type": "application/json",
