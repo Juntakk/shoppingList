@@ -185,22 +185,40 @@ class _GroceryListState extends State<GroceryList> {
     } else if (_groceryItems.isEmpty) {
       content = const Center(child: Text('No items added yet...'));
     } else {
-      content = ListView.builder(
-        itemCount: _groceryItems.length,
-        itemBuilder: (ctx, index) => Dismissible(
-          onDismissed: (direction) {
-            _removeItem(_groceryItems[index]);
-          },
-          key: ValueKey(_groceryItems[index].id),
-          child: ListTile(
-            title: Text(_groceryItems[index].name),
-            leading: Container(
-              width: 24,
-              height: 24,
-              color: _groceryItems[index].category.color,
+      content = Padding(
+        padding: const EdgeInsets.only(top: 8.0),
+        child: ListView.builder(
+          itemCount: _groceryItems.length,
+          itemBuilder: (ctx, index) => Dismissible(
+            onDismissed: (direction) {
+              _removeItem(_groceryItems[index]);
+            },
+            key: ValueKey(_groceryItems[index].id),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ),
+              child: ListTile(
+                title: Text(
+                  _groceryItems[index].name,
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                leading: Container(
+                  width: 24,
+                  height: 24,
+                  color: _groceryItems[index].category.color,
+                ),
+                trailing: Text(
+                  _groceryItems[index].quantity.toString(),
+                  style: const TextStyle(
+                    fontSize: 15,
+                  ),
+                ),
+                onTap: () => _updateItem(_groceryItems[index]),
+              ),
             ),
-            trailing: Text(_groceryItems[index].quantity.toString()),
-            onTap: () => _updateItem(_groceryItems[index]),
           ),
         ),
       );
@@ -217,6 +235,7 @@ class _GroceryListState extends State<GroceryList> {
         ],
       ),
       body: content,
+      backgroundColor: const Color.fromARGB(255, 71, 65, 65),
     );
   }
 }

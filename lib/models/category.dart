@@ -10,7 +10,6 @@ enum Categories {
   convenience,
   hygiene,
   other,
-  carbs,
 }
 
 class Category {

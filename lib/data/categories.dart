@@ -5,27 +5,23 @@ import "package:shopping/models/category.dart";
 const categories = {
   Categories.vegetables: Category(
     'Vegetables',
-    Color.fromARGB(255, 0, 255, 128),
+    Color.fromARGB(255, 3, 88, 46),
   ),
   Categories.fruit: Category(
     'Fruit',
-    Color.fromARGB(255, 145, 255, 0),
+    Color.fromARGB(255, 202, 122, 1),
   ),
   Categories.meat: Category(
     'Meat',
-    Color.fromARGB(255, 255, 102, 0),
+    Color.fromARGB(255, 175, 11, 11),
   ),
   Categories.dairy: Category(
     'Dairy',
-    Color.fromARGB(255, 0, 208, 255),
-  ),
-  Categories.carbs: Category(
-    'Carbs',
-    Color.fromARGB(255, 0, 60, 255),
+    Color.fromARGB(255, 255, 255, 255),
   ),
   Categories.sweets: Category(
     'Sweets',
-    Color.fromARGB(255, 255, 149, 0),
+    Color.fromARGB(255, 194, 22, 157),
   ),
   Categories.spices: Category(
     'Spices',
@@ -33,14 +29,14 @@ const categories = {
   ),
   Categories.convenience: Category(
     'Convenience',
-    Color.fromARGB(255, 191, 0, 255),
+    Color.fromARGB(255, 74, 1, 98),
   ),
   Categories.hygiene: Category(
     'Hygiene',
-    Color.fromARGB(255, 149, 0, 255),
+    Color.fromARGB(255, 3, 131, 166),
   ),
   Categories.other: Category(
     'Other',
-    Color.fromARGB(255, 0, 225, 255),
+    Color.fromARGB(255, 122, 122, 122),
   ),
 };
