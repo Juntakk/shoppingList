@@ -31,7 +31,6 @@ class _GroceryItemDetailsState extends State<GroceryItemDetails> {
   var _enteredName = "";
   var _enteredQuantity = 1;
   late Category _selectedCategory;
-  String? _error;
 
   @override
   void initState() {
@@ -65,7 +64,6 @@ class _GroceryItemDetailsState extends State<GroceryItemDetails> {
 
       if (response.statusCode >= 400) {
         setState(() {
-          _error = "Failed to fetch data, please try again later.";
         });
       }
 
